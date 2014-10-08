@@ -1,0 +1,16 @@
+<form action="/emission" method="post">
+
+	<form>
+ 		Enter a hashtag : <input type="text" name="emission">
+  						  <input type="submit" value="Submit">
+	</form>
+
+
+	<select name="emission">
+		<% for(var i=0; i<tv.length; i++) { %>
+			<option value="<%= tv[i].tag %>"><%= tv[i].emission %></option>
+		<% } %>
+	</select>
+	<input type="hidden" value="<%= userId %>" />
+	<input type="submit" />	
+</form>
